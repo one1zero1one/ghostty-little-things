@@ -26,7 +26,7 @@ Things they all do, because small details are the point:
 - **Long jumps teleport.** When a TUI repaints or the screen redraws, the cursor jumps without gliding across the screen.
 - **The letter under the block stays readable.** It's redrawn in the background colour on top of the lit block.
 - **No glide in from the corner** on the first frame after launch.
-- **Hollow (unfocused) and lock cursors** are left alone.
+- **Nothing is drawn for hollow (unfocused) or lock cursors**, so other splits don't show a cursor.
 
 ## Install
 
@@ -85,7 +85,7 @@ Copy a profile and change the constants at the top: colour, glide duration, glow
 - **The first version left a bright white trail as it moved**, which was a bit trippy. So I went looking at how cursors used to look, and found that old terminals didn't need a trail: phosphor just faded. That became the afterglow.
   - **Amber and green phosphor.** Amber was often called easier on the eyes. [cool-retro-term](https://github.com/Swordfish90/cool-retro-term) exists to bring this look back, and its default profile is amber. See also [Monochrome monitor](https://en.wikipedia.org/wiki/Monochrome_monitor) and this [CRT phosphor research PDF](https://ww.labguysworld.com/crt_phosphor_research.pdf) for colours and decay times. I stretched the amber decay well past the real thing so you can actually see it.
   - **The VT220 block.** [VT220](https://en.wikipedia.org/wiki/VT220), and the [DECSCUSR](https://vt100.net/docs/vt510-rm/DECSCUSR) cursor styles. The Windows Terminal team [checked their blink against a video of a real VT220](https://www.theregister.com/2020/09/23/windows_terminal_1_4/).
-  - **Blink timing.** Raymond Chen on [the Windows caret blink](https://devblogs.microsoft.com/oldnewthing/20240916-00/?p=110272), Microsoft on [flashing UI and `GetCaretBlinkTime`](https://learn.microsoft.com/en-us/previous-versions/windows/desktop/dnacc/flashing-user-interface-and-the-getcaretblinktime-function), and [Mozilla bug 1518196](https://bugzilla.mozilla.org/show_bug.cgi?id=1518196) for stopping the blink after a few seconds. Plus [a short history of the blinking cursor](https://www.inverse.com/innovation/blinking-cursor-history).
+  - **Blink timing.** Raymond Chen on [the Windows caret blink](https://devblogs.microsoft.com/oldnewthing/20240916-00/?p=110272), Microsoft on [flashing UI and `GetCaretBlinkTime`](https://learn.microsoft.com/en-us/previous-versions/windows/desktop/dnacc/flashing-user-interface-and-the-getcaretblinktime-function), and [Mozilla bug 1518196](https://bugzilla.mozilla.org/show_bug.cgi?id=1518196) on caret blink in Firefox. Plus [a short history of the blinking cursor](https://www.inverse.com/innovation/blinking-cursor-history).
 
 Which old cursor is "best" is a matter of taste. These are the ones I liked.
 
