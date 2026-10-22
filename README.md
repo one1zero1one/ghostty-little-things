@@ -4,6 +4,8 @@ It's the little things that make a terminal nice.
 
 Cursor shaders for [Ghostty](https://ghostty.org) on macOS. The shader draws the cursor, so the cursor can glide, glow, and blink like an old terminal.
 
+![amber, then vt220, in Claude Code and a shell](media/cursors.gif)
+
 ## The cursors
 
 All four use the same code. Only the constants at the top of each file are different.
